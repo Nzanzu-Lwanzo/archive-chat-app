@@ -139,7 +139,7 @@ body {
 .chat-card-room {
   display: grid;
   grid-template-rows: 10% 75% 15%;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 
