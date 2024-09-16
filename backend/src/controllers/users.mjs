@@ -21,7 +21,7 @@ export const getAll = async (request, response) => {
       },
     });
 
-    response.send(users);
+    response.send(users || []);
   } catch (e) {
     console.log(e);
     response.sendStatus(500);
@@ -71,7 +71,7 @@ export const searchUsers = async (request, response) => {
       },
     });
 
-    response.json(users);
+    response.json(users || []);
   } catch (e) {
     console.log(e);
     response.sendStatus(500);

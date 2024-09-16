@@ -20,7 +20,7 @@ export const getMessages = async (request, response) => {
       },
     });
 
-    response.json(messages);
+    response.json(messages || []);
   } catch (e) {
     console.log(e);
     response.sendStatus(500);

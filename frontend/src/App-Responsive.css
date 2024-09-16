@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --bg: #2c3539;
   --light: #ffe;
@@ -17,38 +24,55 @@
 
 @media only all and (max-width:1000px) {
   .wrap-cards .right-bar {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
     position: fixed;
     inset: 0;
     background-color: var(--black-shade);
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
     transition: .3s ease-out;
   } 
 
   .wrap-cards .right-bar.show-right-bar {
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .for-mobile.show-right-bar-on-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .wrap-cards {
+    -ms-grid-columns: 35% 65%;
     grid-template-columns: 35% 65%;
   }
 }
 
 @media only all and (max-width:768px) {
   .wrap-cards .conversations-card {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
     z-index: 100;
     position: fixed;
     inset: 0;
     background-color: var(--black-shade);
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
     transition: .3s ease-out;
   } 
 
   .for-mobile.hide-convs-and-groups-on-mobile {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 
@@ -60,11 +84,15 @@
 
   .for-mobile.show-convervsations-groups,
   .for-mobile.hide-convs-and-groups-on-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .wrap-cards .show-conversations-card {
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .wrap-cards {
@@ -84,6 +112,8 @@
   }
 
   .home-page .top {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -109,8 +139,13 @@
   }
 
   .chat-box .message-time.align-groupal-sender-cell-name {
-    flex-direction: column;
-    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     gap: 0;
     border-top: .2px solid grey;
     padding-top: .4rem;

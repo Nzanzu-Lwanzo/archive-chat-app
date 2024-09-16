@@ -57,7 +57,7 @@ export const getUserRooms = async (request, response) => {
       ],
     });
 
-    response.json(rooms);
+    response.json(rooms || []);
   } catch (e) {
     console.log(e);
     response.sendStatus(500);
@@ -198,7 +198,7 @@ export const getRoomUsers = async (request, response) => {
 
     const users = await room.getUsers();
 
-    response.json(users);
+    response.json(users || []);
   } catch (e) {
     console.log(e);
     response.sendStatus(500);
@@ -225,7 +225,7 @@ export const getRoomMessages = async (request, response) => {
       },
     });
 
-    response.json(messages);
+    response.json(messages || []);
   } catch (e) {
     console.log(e);
     response.sendStatus(500);
