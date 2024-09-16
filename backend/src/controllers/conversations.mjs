@@ -26,7 +26,7 @@ export const getAllConversations = async (request, response) => {
       ],
     });
 
-    response.json(conversations.chatter);
+    response.json(conversations?.chatter|| {});
   } catch (e) {
     console.log(e);
     response.sendStatus(500);

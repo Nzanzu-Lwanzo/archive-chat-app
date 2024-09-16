@@ -5,7 +5,8 @@ import {
   GearIcon,
   HomeIcon,
   UserIcon,
-  XCircleIcon
+  XCircleIcon,
+  ArrowLeftIcon
 } from "../../assets/svg";
 import Settings from "../Modal/Settings";
 import Invite from "../Modal/Invite";
@@ -40,6 +41,7 @@ export default function Header() {
     showEditProfileCard,
     toggleShowEditProfileCard,
     setShowRightBarOnMobile,
+    setShowConvAndGroupsBarOnMobile,
   } = useChatContext();
 
   const modalToDisplay =
@@ -50,6 +52,16 @@ export default function Header() {
   return (
     <div className="chat-card-header">
       <div className="contains-icons">
+        <div>
+          <button
+            type="button"
+            className="center header-action"
+            onClick={() => setShowConvAndGroupsBarOnMobile(true)}
+          >
+            <ArrowLeftIcon />
+          </button>
+        </div>
+
         <div>
           {isOnline ? (
             <span className="center cell">Online</span>

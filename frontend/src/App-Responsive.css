@@ -92,6 +92,17 @@
   }
 }
 
+@media only all and (max-width:500px) {
+  .home-page .fade-one.show {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  .chat-message-form {
+    padding-block: 0;
+  }
+} 
+
 @media only all and (max-width:425px) {
   .search-form {
     width:120px;
