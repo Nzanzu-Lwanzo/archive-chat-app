@@ -1,0 +1,70 @@
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .loader {
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+  }
+  
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+.cell {
+    background-color: var(--accent-transp);
+    padding: .1rem .5rem;
+    color: var(--accent);
+    width: fit-content;
+    border-radius: 20px;
+}
+
+.cell-red {
+    background-color: rgba(255, 0, 0,.2);
+    padding: .1rem .5rem;
+    color: var(--accent);
+    width: fit-content;
+    border-radius: 20px;
+    color: red;
+}
+
+.cell-red svg *:not(rect:first-of-type) {
+  stroke: red;
+}
+
+.placeholder {
+  height: 100%;
+}
+
+.custom-scrollbar::-webkit-scrollbar{
+  width: .5rem;
+  background-color: var(--bg);
+  transition: var(--transition);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  background-color: #111314;
+}
+
+.for-mobile {
+  display: none;
+}

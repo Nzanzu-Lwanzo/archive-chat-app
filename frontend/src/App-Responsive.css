@@ -1,0 +1,127 @@
+:root {
+  --bg: #2c3539;
+  --light: #ffe;
+  --accent: #15d846;
+  --transition: 0.3s ease-out;
+  --accent-transp: rgba(21, 216, 70, 0.1);
+  --black-shade: #111314;
+}
+
+
+@media only all and (max-width:1100px) {
+  .wrap-cards {
+    width:100vw;
+    height: 100vh;
+  }
+}
+
+@media only all and (max-width:1000px) {
+  .wrap-cards .right-bar {
+    transform: translateX(100%);
+    position: fixed;
+    inset: 0;
+    background-color: var(--black-shade);
+    transition: .3s ease-out;
+  } 
+
+  .wrap-cards .right-bar.show-right-bar {
+    transform: none;
+  }
+
+  .for-mobile.show-right-bar-on-mobile {
+    display: flex;
+  }
+
+  .wrap-cards {
+    grid-template-columns: 35% 65%;
+  }
+}
+
+@media only all and (max-width:768px) {
+  .wrap-cards .conversations-card {
+    transform: translateX(-100%);
+    z-index: 100;
+    position: fixed;
+    inset: 0;
+    background-color: var(--black-shade);
+    transition: .3s ease-out;
+  } 
+
+  .for-mobile.hide-convs-and-groups-on-mobile {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .for-mobile.hide-convs-and-groups-on-mobile:hover,
+  .for-mobile.hide-convs-and-groups-on-mobile:active,
+  .for-mobile.hide-convs-and-groups-on-mobile:focus {
+    background-color: none;
+  }
+
+  .for-mobile.show-convervsations-groups,
+  .for-mobile.hide-convs-and-groups-on-mobile {
+    display: flex;
+  }
+
+  .wrap-cards .show-conversations-card {
+    transform: none;
+  }
+
+  .wrap-cards {
+    display: block;
+  }
+
+  .filter-n-search .search {
+    gap:0;
+  }
+
+  .modal-card {
+    width: 90%;
+  }
+
+  .home-page .bottom .right {
+    padding-block:0;
+  }
+
+  .home-page .top {
+    height: fit-content;
+  }
+
+  .auth-card {
+    width: 90vw;
+  }
+}
+
+@media only all and (max-width:500px) {
+  .home-page .fade-one.show {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  .home-page .home-page .fade-two.show {
+    font-size: 2rem;
+
+  }
+}
+
+@media only all and (max-width:425px) {
+  .search-form {
+    width:120px;
+  }
+
+  .chat-box .message-time.align-groupal-sender-cell-name {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-top: .2px solid grey;
+    padding-top: .4rem;
+  }
+
+  .home-page * {
+    font-size: .8rem;
+  }
+
+  .home-page .bottom .right {
+    padding:0;
+  }
+} 
