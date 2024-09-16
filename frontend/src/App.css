@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 :root {
   --bg: #2c3539;
   --light: #ffe;
@@ -185,20 +178,10 @@ body {
 
 .chat-card-room {
   display: -ms-grid;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  height: 100%;
+  display: grid;
+  -ms-grid-rows: 10% 75% 15%;
+  grid-template-rows: 10% 75% 15%;
+  height: 100vh;
   position: relative;
 }
 
@@ -420,12 +403,10 @@ body {
           justify-content: flex-start;
   padding: 1rem;
   overflow: auto;
-  height: 100%;
 }
 
 .chat-message-form {
   padding: 1rem;
-  min-height: 80px;
 }
 
 .chat-message-form,
@@ -605,7 +586,6 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   font-size: 0.7rem;
-  min-height: 70px;
 }
 
 .chat-box .message-time.align-groupal-sender-cell-name {
