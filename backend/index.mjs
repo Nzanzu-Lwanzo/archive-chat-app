@@ -54,6 +54,7 @@ App.use(
     resave: false,
     cookie: {
       maxAge: 7 * 24 * 60 * 60,
+      secure : true,
     },
   })
 );

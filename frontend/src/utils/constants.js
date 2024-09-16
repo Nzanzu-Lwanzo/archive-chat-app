@@ -3,7 +3,7 @@ export const BACKEND_ORIGIN = document.location.origin;
 export const DEFAULT_NOTIFICATIONS = {
   NO_PROFILE_IMAGE: {
     id: Date.now(),
-    message: "Add a profile picture",
+    message: "Fonctionnalité notification en essai",
   },
 };
 

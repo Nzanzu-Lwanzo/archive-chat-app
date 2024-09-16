@@ -17,7 +17,7 @@ Room.init({
         get () {
             let filename = this.getDataValue("image");
             if (!filename) return undefined;
-            return `http://localhost:${process.env.PORT}/groups-profile-images/${filename}`;
+            return `https://moza-chat.onrender.com/groups-profile-images/${filename}`;
         }
     }, 
 

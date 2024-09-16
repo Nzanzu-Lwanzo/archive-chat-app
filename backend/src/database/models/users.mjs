@@ -33,7 +33,7 @@ User.init(
       get() {
         let filename = this.getDataValue("image");
         if (!filename) return undefined;
-        return `http://localhost:${process.env.PORT}/users-profile-images/${filename}`;
+        return `https://moza-chat.onrender.com/users-profile-images/${filename}`;
       },
     },
   },
